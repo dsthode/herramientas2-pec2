@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <include src="partials/head.html"></include>
+    <title>The Rolling Stones - Contact information and Credits</title>
+  </head>
+  <body>
+    <include src="partials/header.html" locals='{"modifier":"normal"}'></include>
+    <nav aria-label="breadcrumb" class="breadcrumb-container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <main class="contact">
+      <div class="contact__header">To get in touch with The Rolling Stones, please fill out this form</div>
+      <form class="contact__form">
+        <div class="mb-3">
+          <label for="yourname" class="form-label">Your name</label>
+          <input type="text" id="yourname" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="youremail" class="form-label">Your email address</label>
+          <input type="email" id="youremail" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="yourenquiry" class="form-label">Your enquiry</label>
+          <textarea id="yourenquiry" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      <div class="contact__header">The following free resources were used for the making of this website</div>
+      <ul class="contact__credits">
+        <li><a href="https://commons.wikimedia.org/wiki/File:ABiggerBangTwickenham3.JPG">Photograph of The Rolling Stones on stage</a>, by Egghead06, in the public domain.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:ABiggerBangTwickenham4.JPG">Photograph of The Rolling Stones on stage</a>, by Egghead06, in the public domain.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Rolling_Stones_04.jpg">Photograph of Mick Jagger</a>, by Gorup de Besanez, Creative Commons BY-SA 3.0.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:KeithR2.JPG">Photograph of Keith Richards</a>, by Machocarioca, in the public domain.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Ron-Wood_in_CA.jpg">Photograph of Ron Wood</a>, by Catharine Anderson, Creative Commons BY-SA 2.0.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Charlie_Watts_-_Hanover_2006.jpg">Photograph of Charlie Watts</a>, by BieBand, in the public domain.</li>
+        <li>Several texts excerpted from <a href="https://en.wikipedia.org/wiki/The_Rolling_Stones">the band Wikipedia page</a>.</li>
+      </ul>
+    </main>
+    <include src="partials/footer.html"  locals='{"modifier":"normal"}'></include>
+  </body>
+</html>

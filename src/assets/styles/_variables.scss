@@ -1,0 +1,13 @@
+@use "sass:color";
+
+$font-family-copy : 'Raleway', sans-serif;
+$font-family-headers: 'Changa One', cursive;
+
+$default-text-size: 16px;
+
+$default-link-color: rgb(0, 150, 227);
+
+/* Bootstrap style customizations */
+
+$enable-rounded: false;
+$primary: #000078;

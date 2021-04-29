@@ -1,0 +1,154 @@
+.index__body {
+    background-color: #777;
+}
+
+.index__grid {
+    display: none;
+
+    @supports (display: grid) {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "a a r r n n"
+                             "a a r r d d"
+                             "s s s s d d"
+                             "m b b q q q"
+                             "m b b . c c"
+                             "m p p p c c";
+
+        @include responsive(mobile) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "a a n n"
+                                 "a a d d"
+                                 "s s d d"
+                                 "b b q q"
+                                 "b b c c"
+                                 "p p c c";
+        }
+    
+        &-a {
+            grid-area: a;
+            background-image: url(../images/mick-jagger.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &-b {
+            grid-area: b;
+            background-image: url(../images/keith-richards.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &-c {
+            grid-area: c;
+            background-image: url(../images/ron-wood.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &-d {
+            grid-area: d;
+            background-image: url(../images/charlie-watts.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &-m {
+            grid-area: m;
+            background-color: #000;
+        }
+
+        &-n {
+            grid-area: n;
+            background-color: #333;
+        }
+
+        &-p {
+            grid-area: p;
+            background-color: #777;
+        }
+
+        &-q {
+            @include default-header;
+            @include white-border;
+
+            grid-area: q;
+            background-color: #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive(mobile) {
+                font-size: 200%;
+            }
+        }
+
+        &-r {
+            grid-area: r;
+            background-color: #aaa;
+        }
+
+        &-s {
+            @include default-header;
+            @include white-border;
+
+            grid-area: s;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive(mobile) {
+                font-size: 200%;
+            }
+        }
+    }
+}
+
+.index__float {
+    @supports (display:grid) {
+        display: none;
+    }
+}
+
+.index__title {
+    @include default-header;
+    @include white-border;
+
+    margin-bottom: 1rem;
+
+    @include responsive(mobile) {
+        font-size: 200%;
+        margin-bottom: 2rem;
+    }
+}
+
+.index__row {
+    margin-bottom: 1rem;
+
+    @include responsive(mobile) {
+        margin-bottom: 0;
+    }
+}
+
+.index__img {
+    float: left;
+    width: 50%;
+
+    @include responsive(mobile) {
+        float: none;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.index__clear {
+    clear: both;
+}
